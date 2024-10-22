@@ -1,0 +1,137 @@
+/* styles.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  /* margin: 0; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color:rgb(11, 252, 11);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0px 0px;
+}
+
+.image {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+  height: auto; /* Mantém a proporção */
+  /* max-height: calc(100vh - 100px);
+  object-fit: cover; */
+  max-height: 84vh;
+  object-fit: cover;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  text-align: center;
+  padding: 17px;
+  background-color: #333;
+  color: white;
+  gap: 20px;
+}
+
+footer p {
+  margin-bottom: 10px; /* Espaço entre o texto e as redes sociais */
+}
+
+.socials {
+  display: flex; /* Usar flexbox para alinhar itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 15px; /* Espaço entre os itens das redes sociais */
+}
+
+.socials a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: rgb(11, 252, 11);
+}
+
+.app-content {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Alinha em coluna */
+  flex: 1; /* Permite que o conteúdo ocupe espaço restante */
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+  }
+
+  .nav-list.active {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  image {
+    max-height: 50vh; /* Ajusta a altura máxima para telas menores */
+  }
+
+}

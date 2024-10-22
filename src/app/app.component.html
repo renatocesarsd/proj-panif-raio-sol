@@ -1,0 +1,14 @@
+
+
+<app-navbar></app-navbar>
+<div class="app-content">
+    <router-outlet></router-outlet>
+</div>
+<!-- <app-footer></app-footer> -->
+
+<!-- Exibe o rodapé apenas na página inicial -->
+<app-footer *ngIf="isHomePage"></app-footer>
+
+
+
+
